@@ -99,9 +99,15 @@ And add the following .gitignore
 *.a
 ```
 
-to `~/Code/ThaliMobile-iOS/ThaliMobile/Plugins/io.jxcore.node` to prevent the libraries from being added to GitHub.com.
-This is because libmozjs.a is too large (1.68 GB). You will want to populate this folder with new files from ~/Code/jxcore/out_ios/ios/bin
-whenever you build this project. 
+to `~/Code/ThaliMobile-iOS/ThaliMobile/Plugins/io.jxcore.node` to prevent the libraries in this folder from being added to GitHub.com.
+
+This is because one of the libraries, libmozjs.a, is 1.68 GB and is too large for GitHub.com.
+
+You will want to populate this folder with new files from ~/Code/jxcore/out_ios/ios/bin whenever you build the jxcore project on your
+local machine.
+
+##### Customize the iOS Platform
+See this project for customizations that go further. 
 
 License
 -------
