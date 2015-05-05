@@ -1,5 +1,22 @@
-*.mode1v3
-*.perspectivev3
-*.pbxuser
-.DS_Store
 build/
+
+# Mac OS X
+*.DS_Store
+
+
+# Xcode
+*.pbxuser
+*.BACKUP.*.pbxproj
+*.BASE.*.pbxproj
+*.LOCAL.*.pbxproj
+*.mode2v3
+*.mode1v3
+*.perspective
+*.perspectivev3
+xcuserdata
+*.xcuserstate
+
+## Generic Files To Ignore
+*~
+*.swp
+*.out
