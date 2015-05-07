@@ -15,7 +15,7 @@
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
     <feature name="JXcore">
-        <param name="ios-package" value="CDVJXcore" />
+        <param name="ios-package" value="ThaliCore" />
     </feature>
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />

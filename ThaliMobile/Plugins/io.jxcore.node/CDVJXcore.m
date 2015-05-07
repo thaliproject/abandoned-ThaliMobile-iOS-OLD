@@ -142,10 +142,16 @@ void callback(JXValue *results, int argc) {
   JX_Initialize([sandboxPath UTF8String], callback);
   JX_InitializeNewEngine();
   JX_DefineMainFile([fileContents UTF8String]);
+  [self defineExtensions];
   JX_StartEngine();
   [self jxcoreLoop:[NSNumber numberWithInt:0]];
 
   activeDevice = self;
+}
+
+- (void)defineExtensions
+{
+    // Intentionally empty.
 }
 
 float delay = 0;

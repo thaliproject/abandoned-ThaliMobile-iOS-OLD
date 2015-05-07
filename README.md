@@ -1,5 +1,4 @@
 #Thali
-
 ThaliMobile-iOS project.
 
 ##### Prerequisites

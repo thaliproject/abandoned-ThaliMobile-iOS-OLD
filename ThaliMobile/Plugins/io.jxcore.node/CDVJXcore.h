@@ -4,11 +4,12 @@
 #import <Cordova/CDVPlugin.h>
 
 @interface CDVJXcore : CDVPlugin
-{}
 
 + (NSString*)cordovaVersion;
 
 + (int)jxcoreLoopOnce;
+
+- (void)defineExtensions;
 
 - (void)isReady:(CDVInvokedUrlCommand*)command;
 

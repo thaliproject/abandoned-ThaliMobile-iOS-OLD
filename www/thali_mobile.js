@@ -30,7 +30,7 @@
       logInCordova('Loading app.js');
       jxcore('app.js').loadMainFile(function (ret, err) {
         if (err) {
-          alert(err);
+          alert("Error!!!" + err);
         } else {
           logInCordova('Loaded');
           jxcore_ready();
