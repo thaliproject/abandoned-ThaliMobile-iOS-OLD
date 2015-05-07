@@ -1,7 +1,7 @@
 //
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2015 Microsoft
+//  Copyright (c) 2015 Brian Lambert.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -21,47 +21,36 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//  ThaliMobile
-//  thali_mobile.js
+//  TSNPeerBluetooth
+//  TSNPeerBluetooth.h
 //
 
-(function () {
-  // Log in Cordova.
-  function logInCordova(x) {
-    var logging = document.getElementById('logEntries');
-    if (logging) {
-      var logEntryDiv = document.createElement('div');
-      logEntryDiv.className = 'logEntry';
-      logEntryDiv.innerHTML = x;
-      logging.appendChild(logEntryDiv);
-    }
-  }
+#import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+#import "TSNPeerBluetoothDelegate.h"
 
-  var jxcoreLoadedInterval = setInterval(function () {
-    // HACK Repeat until jxcore is defined. 
-    if (typeof jxcore == 'undefined') {
-      return;
-    }
+// TSNPeerBluetooth interface.v
+@interface TSNPeerBluetooth : NSObject
 
-    // Stop interval.
-    clearInterval(jxcoreLoadedInterval);
+// Properties.
+@property (nonatomic, weak) id<TSNPeerBluetoothDelegate> delegate;
 
-    // Set the ready function.
-    jxcore.isReady(function () {
-      // Log that JXcore is ready.
-      logInCordova('JXcore reports ready.');
+// Class initializer.
+- (instancetype)initWithServiceType:(NSUUID *)serviceType
+                     peerIdentifier:(NSUUID *)peerIdentifier
+                           peerName:(NSString *)peerName;
 
-      jxcore('logger').register(logInCordova);
+// Starts peer Bluetooth.
+- (void)start;
 
-      logInCordova('Loading app.js');
-      jxcore('app.js').loadMainFile(function (ret, err) {
-        if (err) {
-          alert("Error!!!" + err);
-        } else {
-          logInCordova('Loaded');
-          jxcore_ready();
-        }
-      });
-    });
-  }, 10);
-})();
+// Stops peer Bluetooth.
+- (void)stop;
+
+// Updates the location.
+- (void)updateLocation:(CLLocation *)location;
+
+// Updates the status. Returns YES if successful; otherwise, NO. A return value of NO
+// indicates that the status string was too long.
+- (BOOL)updateStatus:(NSString *)status;
+
+@end

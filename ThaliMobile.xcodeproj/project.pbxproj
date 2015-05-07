@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		058D7F9DDB2E4DB6AFA9F56B /* libmozjs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9A42FCD4B340F8A7B953CB /* libmozjs.a */; };
-		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
+		1D3623260D0F684500981E51 /* THEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* THEAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
-		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
-		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
+		302D95F114D2391D003F00A1 /* THEMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* THEMainViewController.m */; };
+		302D95F214D2391D003F00A1 /* THEMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* THEMainViewController.xib */; };
 		305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */; };
 		3088BBBD154F3926009F9C59 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBB7154F3926009F9C59 /* Default-Landscape@2x~ipad.png */; };
 		3088BBBE154F3926009F9C59 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBB8154F3926009F9C59 /* Default-Landscape~ipad.png */; };
@@ -30,6 +30,7 @@
 		30C1856619D5FC0A00212699 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C1856519D5FC0A00212699 /* icon-60@3x.png */; };
 		30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
 		4B779CB9B8D34EDFB1E3F94F /* libhttp_parser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B3BF2054044494FB59CE274 /* libhttp_parser.a */; };
+		4E951774A6FD3BD624878F42 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1951699BBA5AE876851BB9 /* libPods.a */; };
 		501136798E1B4DFDAE37DCCD /* jxcore_cordova.js in Resources */ = {isa = PBXBuildFile; fileRef = 1E902A86CE274DEEA8ACB3D9 /* jxcore_cordova.js */; };
 		508EC521C5C944B9AA808738 /* libsqlite3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1AACB1AE6344FE48E3CAE1E /* libsqlite3.a */; };
 		5139E4D192274E8DA21BF5DF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA97B5AB3E4D4259A78F6F5C /* Security.framework */; };
@@ -52,7 +53,8 @@
 		A5D98FF906614127B13B12D7 /* libopenssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4992D58AFE141428DFAE911 /* libopenssl.a */; };
 		B38648E2CFD84F50B0D13BF8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB62FC09DF44A209380CFC1 /* CFNetwork.framework */; };
 		BD12EB78CC8147D4A0FFC811 /* CDVJXcore.m in Sources */ = {isa = PBXBuildFile; fileRef = 641E592E32A14D9D85354544 /* CDVJXcore.m */; };
-		D398F3C01AFA6D46001664DA /* ThaliCore.m in Sources */ = {isa = PBXBuildFile; fileRef = D398F3BF1AFA6D46001664DA /* ThaliCore.m */; };
+		D398F3C01AFA6D46001664DA /* THEThaliCore.m in Sources */ = {isa = PBXBuildFile; fileRef = D398F3BF1AFA6D46001664DA /* THEThaliCore.m */; };
+		D398F3C51AFBC8D1001664DA /* THEAppContext.m in Sources */ = {isa = PBXBuildFile; fileRef = D398F3C41AFBC8D1001664DA /* THEAppContext.m */; };
 		D499F2AE1F144CBFAE9C02C7 /* libjx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA0101CEEC34790A99CC48B /* libjx.a */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		E623ADC127114811AB6BF6C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82D5C2ECFC44FF194973C8A /* Foundation.framework */; };
@@ -76,8 +78,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1D3623240D0F684500981E51 /* THEAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* THEAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* ThaliMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThaliMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E902A86CE274DEEA8ACB3D9 /* jxcore_cordova.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; path = jxcore_cordova.js; sourceTree = "<group>"; };
 		1F13283614B6496F9C48A7D7 /* libchrome_zlib.a */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = archive.ar; name = libchrome_zlib.a; path = ThaliMobile/Plugins/io.jxcore.node/libchrome_zlib.a; sourceTree = "<group>"; };
@@ -85,9 +87,9 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
-		302D95EE14D2391D003F00A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		302D95EF14D2391D003F00A1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		302D95F014D2391D003F00A1 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		302D95EE14D2391D003F00A1 /* THEMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEMainViewController.h; sourceTree = "<group>"; };
+		302D95EF14D2391D003F00A1 /* THEMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEMainViewController.m; sourceTree = "<group>"; };
+		302D95F014D2391D003F00A1 /* THEMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THEMainViewController.xib; sourceTree = "<group>"; };
 		305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		308547365CF64496BF63CD0A /* jx_result.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jx_result.h; path = io.jxcore.node/jx_result.h; sourceTree = "<group>"; };
 		3088BBB7154F3926009F9C59 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
@@ -107,6 +109,8 @@
 		32CA4F630368D1EE00C91783 /* ThaliMobile-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ThaliMobile-Prefix.pch"; sourceTree = "<group>"; };
 		38D7796D524F4D3F8B0101F8 /* jxcore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = unknown; path = jxcore; sourceTree = "<group>"; };
 		3CB62FC09DF44A209380CFC1 /* CFNetwork.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		47FC029C2A9D5739781F17AC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4D1951699BBA5AE876851BB9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		5B3BF2054044494FB59CE274 /* libhttp_parser.a */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = archive.ar; name = libhttp_parser.a; path = ThaliMobile/Plugins/io.jxcore.node/libhttp_parser.a; sourceTree = "<group>"; };
 		641E592E32A14D9D85354544 /* CDVJXcore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVJXcore.m; path = io.jxcore.node/CDVJXcore.m; sourceTree = "<group>"; };
@@ -121,13 +125,16 @@
 		7E7966DC1810823500FA85AD /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = "<group>"; };
 		7E7966DD1810823500FA85AD /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = "<group>"; };
 		8354B5F39C704CFBA7FE7958 /* CDVJXcore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVJXcore.h; path = io.jxcore.node/CDVJXcore.h; sourceTree = "<group>"; };
+		89F19B2F9809DA5E2D53156A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* ThaliMobile-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ThaliMobile-Info.plist"; path = "../ThaliMobile-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		9C9A42FCD4B340F8A7B953CB /* libmozjs.a */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = archive.ar; name = libmozjs.a; path = ThaliMobile/Plugins/io.jxcore.node/libmozjs.a; sourceTree = "<group>"; };
 		A4992D58AFE141428DFAE911 /* libopenssl.a */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = archive.ar; name = libopenssl.a; path = ThaliMobile/Plugins/io.jxcore.node/libopenssl.a; sourceTree = "<group>"; };
 		BE0F553494C94954812E1032 /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		CA97B5AB3E4D4259A78F6F5C /* Security.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		D398F3BE1AFA6D46001664DA /* ThaliCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThaliCore.h; sourceTree = "<group>"; };
-		D398F3BF1AFA6D46001664DA /* ThaliCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThaliCore.m; sourceTree = "<group>"; };
+		D398F3BE1AFA6D46001664DA /* THEThaliCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEThaliCore.h; sourceTree = "<group>"; };
+		D398F3BF1AFA6D46001664DA /* THEThaliCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEThaliCore.m; sourceTree = "<group>"; };
+		D398F3C31AFBC8D1001664DA /* THEAppContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THEAppContext.h; sourceTree = "<group>"; };
+		D398F3C41AFBC8D1001664DA /* THEAppContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THEAppContext.m; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
 		D82D5C2ECFC44FF194973C8A /* Foundation.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DC15057A3C22433088BB5CF0 /* libcares.a */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = archive.ar; name = libcares.a; path = ThaliMobile/Plugins/io.jxcore.node/libcares.a; sourceTree = "<group>"; };
@@ -159,6 +166,7 @@
 				B38648E2CFD84F50B0D13BF8 /* CFNetwork.framework in Frameworks */,
 				E623ADC127114811AB6BF6C6 /* Foundation.framework in Frameworks */,
 				5139E4D192274E8DA21BF5DF /* Security.framework in Frameworks */,
+				4E951774A6FD3BD624878F42 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,13 +176,15 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				302D95EE14D2391D003F00A1 /* MainViewController.h */,
-				302D95EF14D2391D003F00A1 /* MainViewController.m */,
-				302D95F014D2391D003F00A1 /* MainViewController.xib */,
-				1D3623240D0F684500981E51 /* AppDelegate.h */,
-				1D3623250D0F684500981E51 /* AppDelegate.m */,
-				D398F3BE1AFA6D46001664DA /* ThaliCore.h */,
-				D398F3BF1AFA6D46001664DA /* ThaliCore.m */,
+				302D95EE14D2391D003F00A1 /* THEMainViewController.h */,
+				302D95EF14D2391D003F00A1 /* THEMainViewController.m */,
+				302D95F014D2391D003F00A1 /* THEMainViewController.xib */,
+				1D3623240D0F684500981E51 /* THEAppDelegate.h */,
+				1D3623250D0F684500981E51 /* THEAppDelegate.m */,
+				D398F3BE1AFA6D46001664DA /* THEThaliCore.h */,
+				D398F3BF1AFA6D46001664DA /* THEThaliCore.m */,
+				D398F3C31AFBC8D1001664DA /* THEAppContext.h */,
+				D398F3C41AFBC8D1001664DA /* THEAppContext.m */,
 			);
 			name = Classes;
 			path = ThaliMobile/Classes;
@@ -188,6 +198,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1B61FD54BEEC83B956FD0BCA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47FC029C2A9D5739781F17AC /* Pods.debug.xcconfig */,
+				89F19B2F9809DA5E2D53156A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +218,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				1B61FD54BEEC83B956FD0BCA /* Pods */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -244,6 +264,7 @@
 				3CB62FC09DF44A209380CFC1 /* CFNetwork.framework */,
 				D82D5C2ECFC44FF194973C8A /* Foundation.framework */,
 				CA97B5AB3E4D4259A78F6F5C /* Security.framework */,
+				4D1951699BBA5AE876851BB9 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -323,10 +344,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "ThaliMobile" */;
 			buildPhases = (
+				754F18C067F07141282AD4E3 /* Check Pods Manifest.lock */,
 				304B58A110DAC018002A0835 /* Copy www directory */,
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				5A8462F00EA15E6AF6589EB1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -396,7 +419,7 @@
 				30B4F30119D5E07200D9F7D8 /* Default-736h.png in Resources */,
 				308D05381370CCF300D202BF /* icon.png in Resources */,
 				308D05391370CCF300D202BF /* icon@2x.png in Resources */,
-				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
+				302D95F214D2391D003F00A1 /* THEMainViewController.xib in Resources */,
 				7E7966E01810823500FA85AD /* icon-50.png in Resources */,
 				7E7966E31810823500FA85AD /* icon-60@2x.png in Resources */,
 				7E7966E61810823500FA85AD /* icon-small.png in Resources */,
@@ -439,6 +462,36 @@
 			shellScript = "cordova/lib/copy-www-build-step.sh";
 			showEnvVarsInLog = 0;
 		};
+		5A8462F00EA15E6AF6589EB1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		754F18C067F07141282AD4E3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -447,10 +500,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
-				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				D398F3C51AFBC8D1001664DA /* THEAppContext.m in Sources */,
+				1D3623260D0F684500981E51 /* THEAppDelegate.m in Sources */,
+				302D95F114D2391D003F00A1 /* THEMainViewController.m in Sources */,
 				BD12EB78CC8147D4A0FFC811 /* CDVJXcore.m in Sources */,
-				D398F3C01AFA6D46001664DA /* ThaliCore.m in Sources */,
+				D398F3C01AFA6D46001664DA /* THEThaliCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +521,7 @@
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47FC029C2A9D5739781F17AC /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -509,6 +564,7 @@
 		};
 		1D6058950D05DD3E006BFB54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89F19B2F9809DA5E2D53156A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;

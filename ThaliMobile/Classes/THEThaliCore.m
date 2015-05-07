@@ -1,12 +1,31 @@
 //
-//  ThaliCore.m
+//  The MIT License (MIT)
+//
+//  Copyright (c) 2015 Microsoft
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+//
 //  ThaliMobile
-//
-//  Created by Brian Lambert on 5/6/15.
-//
+//  THEThaliCore.m
 //
 
-#import "ThaliCore.h"
+#import "THEThaliCore.h"
 #import <Cordova/CDV.h>
 #include "jx.h"
 
@@ -15,26 +34,21 @@ JXValue * javaScriptFunction2;
 
 void registerJavaScriptFunction1(JXValue *params, int argc)
 {
+    NSLog(@"registerJavaScriptFunction1 called.");
+
     assert(JX_IsFunction(params));
-    
     javaScriptFunction1 = params;
     JX_MakePersistent(javaScriptFunction1);
     
-    NSLog(@"&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
-    NSLog(@"registerJavaScriptFunction1 called.");
-    NSLog(@"&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
 }
 
 void registerJavaScriptFunction2(JXValue *params, int argc)
 {
+    NSLog(@"registerJavaScriptFunction1 called.");
+
     assert(JX_IsFunction(params));
-    
     javaScriptFunction2 = params;
     JX_MakePersistent(javaScriptFunction2);
-
-    NSLog(@"&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
-    NSLog(@"registerJavaScriptFunction2 called.");
-    NSLog(@"&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
 }
 
 void nativeFunction1(JXResult * results, int argc)
@@ -77,18 +91,20 @@ void nativeFunction2(JXResult * results, int argc)
     JX_CallFunction(javaScriptFunction2, params, 1, &ret_val);
 }
 
-// ThaliCore (Internal) interface.
-@interface ThaliCore (Internal)
+// THEThaliCore (Internal) interface.
+@interface THEThaliCore (Internal)
 @end
 
-// ThaliCore implementation.
-@implementation ThaliCore
+// THEThaliCore implementation.
+@implementation THEThaliCore
 {
 @private
 }
 
+// Define extensions.
 - (void)defineExtensions
 {
+    // Call the base class method.
     [super defineExtensions];
     
     // Define native methods extensions.
@@ -100,6 +116,6 @@ void nativeFunction2(JXResult * results, int argc)
 
 @end
 
-// ThaliCore (Internal) implementation.
-@implementation ThaliCore (Internal)
+// THEThaliCore (Internal) implementation.
+@implementation THEThaliCore (Internal)
 @end

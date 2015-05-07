@@ -22,46 +22,68 @@
 //  THE SOFTWARE.
 //
 //  ThaliMobile
-//  thali_mobile.js
+//  THEAppContext.m
 //
 
-(function () {
-  // Log in Cordova.
-  function logInCordova(x) {
-    var logging = document.getElementById('logEntries');
-    if (logging) {
-      var logEntryDiv = document.createElement('div');
-      logEntryDiv.className = 'logEntry';
-      logEntryDiv.innerHTML = x;
-      logging.appendChild(logEntryDiv);
+#import "THEAppContext.h"
+
+// THEAppContext (Internal) interface.
+@interface THEAppContext (Internal)
+
+// Class initializer.
+- (instancetype)init;
+
+@end
+
+// THEAppContext implementation.
+@implementation THEAppContext
+{
+@private
+}
+
+// Singleton.
++ (instancetype)singleton
+{
+    // Singleton instance.
+    static THEAppContext * appContext = nil;
+    
+    // If unallocated, allocate.
+    if (!appContext)
+    {
+        // Allocator.
+        void (^allocator)() = ^
+        {
+            appContext = [[THEAppContext alloc] init];
+        };
+        
+        // Dispatch allocator once.
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, allocator);
     }
-  }
+    
+    // Done.
+    return appContext;
+}
 
-  var jxcoreLoadedInterval = setInterval(function () {
-    // HACK Repeat until jxcore is defined. 
-    if (typeof jxcore == 'undefined') {
-      return;
+@end
+
+// THEAppContext (Internal) implementation.
+@implementation THEAppContext (Internal)
+
+// Class initializer.
+- (instancetype)init
+{
+    // Initialize superclass.
+    self = [super init];
+    
+    // Handle errors.
+    if (!self)
+    {
+        return nil;
     }
+    
+    // Done.
+    return self;
+}
 
-    // Stop interval.
-    clearInterval(jxcoreLoadedInterval);
-
-    // Set the ready function.
-    jxcore.isReady(function () {
-      // Log that JXcore is ready.
-      logInCordova('JXcore reports ready.');
-
-      jxcore('logger').register(logInCordova);
-
-      logInCordova('Loading app.js');
-      jxcore('app.js').loadMainFile(function (ret, err) {
-        if (err) {
-          alert("Error!!!" + err);
-        } else {
-          logInCordova('Loaded');
-          jxcore_ready();
-        }
-      });
-    });
-  }, 10);
-})();
+@end

@@ -1,7 +1,7 @@
 //
 //  The MIT License (MIT)
 //
-//  Copyright (c) 2015 Microsoft
+//  Copyright (c) 2015 Brian Lambert.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -21,47 +21,36 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//  ThaliMobile
-//  thali_mobile.js
+//  TSNPeerBluetooth
+//  TSNPeerBluetoothDelegate.h
 //
 
-(function () {
-  // Log in Cordova.
-  function logInCordova(x) {
-    var logging = document.getElementById('logEntries');
-    if (logging) {
-      var logEntryDiv = document.createElement('div');
-      logEntryDiv.className = 'logEntry';
-      logEntryDiv.innerHTML = x;
-      logging.appendChild(logEntryDiv);
-    }
-  }
+// Forward declarations.
+@class CLLocation;
+@class TSNPeerBluetooth;
 
-  var jxcoreLoadedInterval = setInterval(function () {
-    // HACK Repeat until jxcore is defined. 
-    if (typeof jxcore == 'undefined') {
-      return;
-    }
+// TSNPeerBluetoothDelegate protocol.
+@protocol TSNPeerBluetoothDelegate <NSObject>
+@required
 
-    // Stop interval.
-    clearInterval(jxcoreLoadedInterval);
+// Notifies the delegate that a peer was connected.
+- (void)peerBluetooth:(TSNPeerBluetooth *)peerBluetooth
+didConnectPeerIdentifier:(NSUUID *)peerIdentifier
+             peerName:(NSString *)peerName
+         peerLocation:(CLLocation *)peerLocation;
 
-    // Set the ready function.
-    jxcore.isReady(function () {
-      // Log that JXcore is ready.
-      logInCordova('JXcore reports ready.');
+// Notifies the delegate that a peer was disconnected.
+- (void)peerBluetooth:(TSNPeerBluetooth *)peerBluetooth
+didDisconnectPeerIdentifier:(NSUUID *)peerIdentifier;
 
-      jxcore('logger').register(logInCordova);
+// Notifies the delegate that a peer location was received.
+- (void)peerBluetooth:(TSNPeerBluetooth *)peerBluetooth
+didReceivePeerLocation:(CLLocation *)peerLocation
+   fromPeerIdentifier:(NSUUID *)peerIdentifier;
 
-      logInCordova('Loading app.js');
-      jxcore('app.js').loadMainFile(function (ret, err) {
-        if (err) {
-          alert("Error!!!" + err);
-        } else {
-          logInCordova('Loaded');
-          jxcore_ready();
-        }
-      });
-    });
-  }, 10);
-})();
+// Notifies the delegate that a peer status was received.
+- (void)peerBluetooth:(TSNPeerBluetooth *)peerBluetooth
+ didReceivePeerStatus:(NSString *)peerStatus
+   fromPeerIdentifier:(NSUUID *)peerIdentifier;
+
+@end

@@ -22,7 +22,7 @@
 //  THE SOFTWARE.
 //
 //  ThaliMobile
-//  ThaliMobile-Prefix.h
+//  THEAppDelegate.h
 //
 
 /*
@@ -43,11 +43,19 @@
  specific language governing permissions and limitations
  under the License.
  */
-//
-// Prefix header for all source files of the 'ThaliMobile' target in the 'ThaliMobile' project
-//
 
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-    #import <UIKit/UIKit.h>
-#endif
+#import <UIKit/UIKit.h>
+#import <Cordova/CDVViewController.h>
+
+// THEAppDelegate interface.
+@interface THEAppDelegate : NSObject <UIApplicationDelegate>
+
+// invoke string is passed to your app on launch, this is only valid if you
+// edit ThaliMobile-Info.plist to add a protocol
+// a simple tutorial can be found here :
+// http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+
+@property (nonatomic, strong) IBOutlet UIWindow* window;
+@property (nonatomic, strong) IBOutlet CDVViewController* viewController;
+
+@end
