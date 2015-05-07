@@ -33,4 +33,10 @@
 // Class singleton.
 + (instancetype)singleton;
 
+// Starts communications.
+- (void)startCommunications;
+
+// Stops communications.
+- (void)stopCommunications;
+
 @end
