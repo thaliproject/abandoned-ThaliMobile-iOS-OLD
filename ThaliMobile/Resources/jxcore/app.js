@@ -77,3 +77,5 @@ cordova('asyncPing').registerAsync(function(message, callback){
                                               }, 500);
                                    });
 */
+
+process.natives.startCommunications();

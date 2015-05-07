@@ -30,4 +30,7 @@
 // THEThaliCore interface.
 @interface THEThaliCore : CDVJXcore
 
+// Class initializer.
+- (CDVPlugin*)initWithWebView:(UIWebView *)theWebView;
+
 @end

@@ -28,6 +28,7 @@
 #import <TSNAtomicFlag.h>
 #import <TSNPeerBluetooth.h>
 #import "THEAppContext.h"
+#include "jx.h"
 
 // THEAppContext (Internal) interface.
 @interface THEAppContext (Internal)
@@ -75,21 +76,19 @@
 // Starts communications.
 - (void)startCommunications
 {
-//    if ([_atomicFlagEnabled trySet])
-//    {
-//        [_peerBluetooth start];
-//        [_locationContext start];
-//    }
+    if ([_atomicFlagEnabled trySet])
+    {
+        [_peerBluetooth start];
+    }
 }
 
 // Stops communications.
 - (void)stopCommunications
 {
-//    if ([_atomicFlagEnabled tryClear])
-//    {
-//        [_peerBluetooth stop];
-//        [_locationContext stop];
-//    }
+    if ([_atomicFlagEnabled tryClear])
+    {
+        [_peerBluetooth stop];
+    }
 }
 
 @end

@@ -27,6 +27,7 @@
 
 #import "THEThaliCore.h"
 #import <Cordova/CDV.h>
+#import "THEAppContext.h"
 #include "jx.h"
 
 JXValue * javaScriptFunction1;
@@ -49,6 +50,16 @@ void registerJavaScriptFunction2(JXValue *params, int argc)
     assert(JX_IsFunction(params));
     javaScriptFunction2 = params;
     JX_MakePersistent(javaScriptFunction2);
+}
+
+void startCommunications(JXValue *params, int argc)
+{
+    [[THEAppContext singleton] startCommunications];
+}
+
+void stopCommunications(JXValue *params, int argc)
+{
+    [[THEAppContext singleton] stopCommunications];
 }
 
 void nativeFunction1(JXResult * results, int argc)
@@ -101,6 +112,23 @@ void nativeFunction2(JXResult * results, int argc)
 @private
 }
 
+// Class initializer.
+- (CDVPlugin*)initWithWebView:(UIWebView *)theWebView
+{
+    // Initialize superclass.
+    self = [super initWithWebView:theWebView];
+    
+    // Handle errors.
+    if (!self)
+    {
+        return nil;
+    }
+    
+    // Initialize.
+    
+    return self;
+}
+
 // Define extensions.
 - (void)defineExtensions
 {
@@ -110,6 +138,8 @@ void nativeFunction2(JXResult * results, int argc)
     // Define native methods extensions.
     JX_DefineExtension("registerJavaScriptFunction1", registerJavaScriptFunction1);
     JX_DefineExtension("registerJavaScriptFunction2", registerJavaScriptFunction2);
+    JX_DefineExtension("startCommunications", startCommunications);
+    JX_DefineExtension("stopCommunications", stopCommunications);
     JX_DefineExtension("nativeFunction1", nativeFunction1);
     JX_DefineExtension("nativeFunction2", nativeFunction2);
 }
