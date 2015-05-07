@@ -16,15 +16,14 @@
       return;
     }
 
-    // Stop inerval.
+    // Stop interval.
     clearInterval(jxcoreLoadedInterval);
 
     // Set the ready function.
     jxcore.isReady(function () {
+      // Log that JXcore is ready.
+      logInCordova('JXcore reports ready.');
 
-      logInCordova('JXcore reports ready');
-
-      logInCordova('Registering log function');
       jxcore('logger').register(logInCordova);
 
       logInCordova('Loading app.js');

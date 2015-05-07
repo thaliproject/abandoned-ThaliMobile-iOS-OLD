@@ -2,15 +2,20 @@ var fs = require('fs');
 var path = require('path');
 
 cordova('logger').call("JXcore is up and running!");
-cordova('logger').call("Brian1");
-cordova('logger').call("Brian2");
-cordova('logger').call("Brian3");
-cordova('logger').call("Brian4");
-cordova('logger').call("Brian5");
-cordova('logger').call("Brian6");
 
-process.natives.thaliMethod1();
-process.natives.thaliMethod2("Brian");
+var javaScriptFunction1 = function() {
+    cordova('logger').call("javaScriptFunction1 called from native.");
+};
+
+var javaScriptFunction2 = function(message) {
+    cordova('logger').call("javaScriptFunction1 called from native. Message is " + message);
+};
+
+process.natives.registerJavaScriptFunction1(javaScriptFunction1);
+process.natives.registerJavaScriptFunction2(javaScriptFunction2);
+
+process.natives.nativeFunction1();
+process.natives.nativeFunction2("JavaScript calling");
 
 
 //cordova('brianSampleMethod').registerSync(function() {
